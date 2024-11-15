@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Report</title>
+
+  <link
+  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet"
+/>
+<link href="https://unpkg.com/filepond@^4/dist/filepond.css" rel="stylesheet" />
+<link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet" />
+<link
+    href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css"
+    rel="stylesheet"
+/>
+<link
+    href="https://unpkg.com/filepond-plugin-image-edit/dist/filepond-plugin-image-edit.css"
+    rel="stylesheet"
+/>
+	<link rel="stylesheet" href="css/materialize.css">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="./js/filePond/filepond.css">
+
+</head>
+<body>
+
+ <div class="main_body">
+
+  <div class="row parcel_form">
+
+<form id="data_form">
+        <!-- insert location details (gps) -->
+          <!-- <h1>Questionnaire</h1> -->
+
+
+      <div class="input-field col s12">
+          <span>1. Name</span><br>
+            <input id="sub_1_1" name="sub_1_1" placeholder="Name" type="text">
+
+        </div>
+
+      <div class="input-field col s12">
+          <span>2. Parent Name</span><br>
+            <input id="sub_1_2" name="sub_1_2" placeholder="Parent Name" type="text">
+
+        </div>
+      <div class="input-field col s12">
+          <span>3. Consent</span><br>
+          <select  name="sub_1_3" id="sub_1_3" style="display: block;">
+            <option value="">Select your answer</option>
+            <option  value="Yes">Yes</option>
+            <option  value="No">No</option>
+          </select>
+
+        </div>
+
+        <div class="input-field col s12">
+          <span>4. Phone </span><br>
+            <input id="sub_1_4" name="sub_1_4" placeholder="Phone" type="text">
+        </div>
+
+        <div class="input-field col s12">
+          <span>5. Preferred Time</span><br>
+          <select class="select_els"  name="sub_1_5" id="sub_1_5" style="display: block;">
+            <option value="">Select your answer</option>
+            <option id="3-4pm" value="3-4pm">3-4pm</option>
+            <option  value="4-5pm">4-5pm</option>
+            <option  value="4-5pm">5-6pm</option>
+          </select>
+        </div>
+
+        <div class="input-field col s12 center_it">
+        <button id="branding_btn" class="btn-large  margin-bottom waves-effect waves-light pick_color">  Upload Information <i class="fa fa-send"></i></button>
+      </div>
+
+</form>
+
+
+
+
+
+
+  </div>
+
+ </div>
+ <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
+ <script src="https://unpkg.com/filepond-plugin-image-edit/dist/filepond-plugin-image-edit.js"></script>
+ <script src="https://unpkg.com/filepond-plugin-file-validate-size/dist/filepond-plugin-file-validate-size.js"></script>
+ <script src="https://unpkg.com/filepond-plugin-image-exif-orientation/dist/filepond-plugin-image-exif-orientation.js"></script>
+
+ <script src="https://unpkg.com/filepond@^4/dist/filepond.js"></script>
+<!-- <script type="text/javascript" src="js/filePond/filepond.js"></script> -->
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/materialize.js"></script>
+<script type="text/javascript" src="js/localforage.min.js"></script>
+<script type="text/javascript" src="js/sweet.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/location.js"></script>
+<script type="text/javascript" src="util/summary.js"></script>
+
+</body>
+</html>
