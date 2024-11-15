@@ -19,8 +19,9 @@ body{
 	min-height: 100vh;
 	background-image: url("../public/image/desktopPlain1.jpg");
 	background-repeat: no-repeat;
-	/* background-origin: content-box; */
+	background-origin: content-box;
 	background-position: center;
+	background-attachment: scroll;
 	background-size: cover;
 	overflow-x: hidden;
 }
@@ -351,7 +352,7 @@ nav a {
 
   @media (max-width: 768px){
 	.main_body{
-	  background-image: url("../public/image/768-MAIN.jpg")
+	  background-image: url("../public/image/768-MAIN.jpg") !important;
 	}
   }
 
