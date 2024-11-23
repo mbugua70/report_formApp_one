@@ -1,20 +1,7 @@
 const form = document.getElementById("data_form");
 const inputs = document.querySelectorAll("input");
 const selectElements = document.querySelectorAll("select_els");
-// const selectElContainer_2 = document.getElementById("sub_1_8");
-// const hideContainer_2 = document.getElementById("hide_two_container")
-// const hideContainer_3 = document.getElementById("unhide_two_container")
 
-// selectElContainer_2.addEventListener("input",function(){
-//     valueOne = $("#sub_1_8").val()
-//     if($("#yes_two").val() === valueOne){
-//       hideContainer_2.style.display = "block";
-//       hideContainer_3.style.display = "none"
-//     }else{
-//       hideContainer_3.style.display = "block";
-//       hideContainer_2.style.display = "none";
-//     }
-//     },false);
 
 form.addEventListener(
   "submit",

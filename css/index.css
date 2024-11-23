@@ -4,10 +4,16 @@
 } */
 body{
 	margin:0;
-	/* width: 100vw; */
+	width: 100vw;
 	height: 100vh;
 	height: 100dvh;
 
+}
+
+img{
+	width: 100%;
+	height: 100%;
+	position: absolute;
 }
 
 
@@ -16,24 +22,37 @@ body{
 	flex-direction: column;
 	justify-content: center;
 	width: 100%;
-	min-height: 100vh;
-	background-image: url("../public/image/desktopPlain1.jpg");
+	height: 100vh;
+	background-image: url("../public/image/desktopPlain-Recovered.jpg");
 	background-repeat: no-repeat;
-	background-origin: content-box;
-	background-position: center;
-	background-attachment: scroll;
-	background-size: cover;
+	/* background-origin: content-box; */
+	background-position: top left;
+	background-attachment: fixed;
+	background-size: 100% 100%;
 	overflow-x: hidden;
 }
 
 .body_child{
-	width: 100%;
+	width: 100vw;
 	width: 100vw;
 	height: 100vh;
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
+	align-items: center;
 
+}
+
+.body_child p{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.body_child  a{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 .topmenu{
 	float: left;
@@ -96,13 +115,17 @@ text-align: right !important;
 	background-color: #1565C0;
 }
 
-.input-field input, .input-field select {
+.input-field input,.input-field select {
    margin-top: 4px !important;
-   background-color: #fff !important;
+   background-color: #11a625 !important;
    border-radius: 12px !important;
    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
    border-style: none !important;
    padding-block: 4px !important;
+}
+
+.input-field inputs::placeholder, .input-field select::placeholder{
+	color: "#fff" !important;
 }
 
 
@@ -334,25 +357,46 @@ nav a {
   }
 
       /* background image responsiveness */
-@media (min-width: 1080px){
+@media (min-width: 1025px){
+	.btn-large {
+		font-size: 28px;
+		padding: 32px 28px;
+		line-height: 0;
+	}
+
+	.input-field span{
+		font-size: 28px;
+	}
+
+	.input-field input{
+		padding: 18px 12px !important;
+		font-size: 28px !important;
+
+	}
+
+   select {
+	height: 5rem;
+	font-size: 28px;
+   }
+
+
 
 	.main_body {
-	  background-image: url("../public/image/desktopPlain1.jpg");
-
+	  background-image: url("../public/image/desktopPlain-Recovered.jpg");
 	}
 
   }
 
-  @media (max-width: 1080px) {
+  @media (max-width: 996px) {
 
 	.main_body {
-	  background-image: url("../public/image/768-MAIN.jpg");
+	  background-image: url("../public/image/768-PLAIN.jpg");
 	}
   }
 
   @media (max-width: 768px){
 	.main_body{
-	  background-image: url("../public/image/768-MAIN.jpg") !important;
+	  background-image: url("../public/image/768-PLAIN.jpg");
 	}
   }
 
@@ -360,12 +404,12 @@ nav a {
   @media (max-width: 360px) {
 
 	.main_body {
-	  background-image: url("../public/image/360-mainplain11.jpg");
+	  background-image: url("../public/image/360PLAIN.jpg");
 	}
   }
 
   @media (max-width: 320px) {
 	.main_body {
-	  background-image: url("../public/image/320-main.jpg");
+	  background-image: url("../public/image/320plain.jpg");
 	}
   }
