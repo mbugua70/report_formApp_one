@@ -6,7 +6,7 @@ form.addEventListener(
   "submit",
   function (e) {
     e.preventDefault();
-    const project = "KONYAGI";
+    const project = "ACTIVATION";
     const formData_one = new FormData(form);
     nameEl = $("#ba_name").val();
     PhoneEl = $("#ba_phone").val();
@@ -38,7 +38,7 @@ form.addEventListener(
       console.log(formData_one);
 
       setTimeout(() => {
-        fetch("https://iguru.co.ke/konyagi/scripts/BM.php", {
+        fetch("scripts/BM.php", {
           method: "POST",
           body: formData_one,
         })

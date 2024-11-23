@@ -7,6 +7,7 @@ body{
 	width: 100vw;
 	height: 100vh;
 	height: 100dvh;
+	overflow: hidden;
 
 }
 
@@ -26,7 +27,7 @@ img{
 	background-image: url("../public/image/desktopPlain-Recovered.jpg");
 	background-repeat: no-repeat;
 	/* background-origin: content-box; */
-	background-position: top left;
+	background-position: center;
 	background-attachment: fixed;
 	background-size: 100% 100%;
 	overflow-x: hidden;
@@ -115,17 +116,27 @@ text-align: right !important;
 	background-color: #1565C0;
 }
 
+.input-field input, .input-field select {
+	color: #fff;
+}
+
 .input-field input,.input-field select {
    margin-top: 4px !important;
-   background-color: #11a625 !important;
+   background-color: #2cb34a !important;
    border-radius: 12px !important;
    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
    border-style: none !important;
    padding-block: 4px !important;
 }
 
+
+
 .input-field inputs::placeholder, .input-field select::placeholder{
 	color: "#fff" !important;
+}
+
+ ::selection{
+	color: "#fff";
 }
 
 
@@ -300,7 +311,7 @@ h2{
 /* coop styling */
 :root{
 	--primary-color: #da1616 ;
-	--secondary-color: #0d6ed1;
+	--secondary-color: #606060;
 }
 
 nav{
@@ -387,12 +398,12 @@ nav a {
 
   }
 
-  @media (max-width: 996px) {
+  /* @media (max-width: 996px) {
 
 	.main_body {
 	  background-image: url("../public/image/768-PLAIN.jpg");
 	}
-  }
+  } */
 
   @media (max-width: 768px){
 	.main_body{

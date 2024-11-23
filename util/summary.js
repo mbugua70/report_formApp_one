@@ -5,67 +5,70 @@ form.addEventListener(
   "submit",
   function (e) {
     e.preventDefault();
-    const project = "SUMMARY";
+    const project = "UNDERAGE";
     const formData_one = new FormData(form);
     nameEl = $("#ba_name").val();
     PhoneEl = $("#ba_phone").val();
     locationsEl = $("#ba_region").val();
 
-    console.log(formData_one)
+    console.log(formData_one);
 
     const sub_1_1 = formData_one.get("sub_1_1");
-    const sub_1_2 = formData_one.get("sub_1_2")
+    const sub_1_2 = formData_one.get("sub_1_2");
     const sub_1_3 = formData_one.get("sub_1_3");
     const sub_1_4 = formData_one.get("sub_1_4");
     const sub_1_5 = formData_one.get("sub_1_5");
     const sub_1_6 = formData_one.get("sub_1_6");
-    console.log(sub_1_1)
+    console.log(sub_1_1);
 
-    if(sub_1_1 === "" || sub_1_2 === "" || sub_1_3 === "" || sub_1_4 === "" || sub_1_5 === "" || sub_1_6 === "" ){
-        appNotifier("Please fill in all the required fields!")
-    }else{
+    if (
+      sub_1_1 === "" ||
+      sub_1_2 === "" ||
+      sub_1_3 === "" ||
+      sub_1_4 === "" ||
+      sub_1_5 === "" ||
+      sub_1_6 === ""
+    ) {
+      appNotifier("Please fill in all the required fields!");
+    } else {
+      //  appending to the formData object created above
+      formData_one.append("ba_name", nameEl);
+      formData_one.append("ba_phone", PhoneEl);
+      formData_one.append("ba_region", locationsEl);
+      formData_one.append("project", project);
 
-        //  appending to the formData object created above
-    formData_one.append("ba_name", nameEl);
-    formData_one.append("ba_phone", PhoneEl);
-    formData_one.append("ba_region", locationsEl);
-    formData_one.append("project", project);
+      console.log(formData_one);
 
-   console.log(formData_one);
-
-
-    setTimeout(() => {
-      fetch("https://iguru.co.ke/airtel/scripts/BM.php", {
-      method: "POST",
-      body: formData_one,
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (!data.error) {
-
-          workingNotifier("Details Submitted Successfully!");
-          shouldProceed = false;
-          window.location.href= "index.html"
-        } else {
-        }
-      })
-      .catch((err) => {
-        if (err.message === "Failed to fetch") {
-          console.log(err);
-          appNotifier("Network error, Please try again!");
-          shouldProceed = false;
-
-        }else{
-          console.log(err)
-          appNotifier("Operation has not been completed!")
-        }
+      setTimeout(() => {
+        fetch("scripts/BM.php", {
+          method: "POST",
+          body: formData_one,
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (!data.error) {
+              workingNotifier("Details Submitted Successfully!");
+              shouldProceed = false;
+              setTimeout(() => {
+                window.location.href = "index.html";
+              }, 4000);
+            } else {
+            }
+          })
+          .catch((err) => {
+            if (err.message === "Failed to fetch") {
+              console.log(err);
+              appNotifier("Network error, Please try again!");
+              shouldProceed = false;
+            } else {
+              console.log(err);
+              appNotifier("Operation has not been completed!");
+            }
+          });
+      }, 0);
+      inputs.forEach((input) => {
+        input.value = "";
       });
-    }, 0)
-    inputs.forEach((input) => {
-      input.value = "";
-    });
-
-
     }
 
 

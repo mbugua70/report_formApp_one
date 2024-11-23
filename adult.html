@@ -7,6 +7,11 @@
 	<title>REPORT</title>
 
   <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+
+  <link
   href="https://fonts.googleapis.com/icon?family=Material+Icons"
   rel="stylesheet"
 />
@@ -19,7 +24,7 @@
 
  <div class="main_body">
 
-  <div class="row parcel_form">
+  <div class="row parcel_form animate__animated animate__fadeInLeft">
 <form id="data_form">
 
         <!-- insert location details (gps) -->
@@ -45,7 +50,7 @@
           <div class="input-field col s12">
           <span>4. Preferred time</span><br>
           <select class="select_els"  name="sub_1_4" id="sub_1_4" style="display: block;">
-            <option value="">Select your answer</option>
+            <option class="select_placeholder" value="">Select your answer</option>
             <option id="3-4pm" value="3-4pm">3-4pm</option>
             <option  value="4-5pm">4-5pm</option>
             <option  value="4-5pm">5-6pm</option>
@@ -78,29 +83,6 @@
 
 
 <script type="text/javascript">
-
-  // unchecked radio button
-// $(document).ready(function(){
-//   $('.row-checked input[type="radio"]').click(function(){
-//     var parentDiv = $(this).closest('.row-checked');
-//     var name = $(this).attr('name');
-//     parentDiv.find('input[type="radio"]').each(function(){
-//       if($(this).attr('name') !== name) {
-//         $(this).prop('checked', false);
-//       }
-//     });
-//   });
-// });
-
-
-// app.prefill();
-
-
-
-
-
-
-
 </script>
 </body>
 </html>
