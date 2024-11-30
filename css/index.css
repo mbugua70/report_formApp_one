@@ -116,13 +116,12 @@ text-align: right !important;
 	background-color: #1565C0;
 }
 
-.input-field input, .input-field select {
-	color: #fff;
-}
+
+
 
 .input-field input,.input-field select {
    margin-top: 4px !important;
-   background-color: #2cb34a !important;
+   background-color: #fff !important;
    border-radius: 12px !important;
    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
    border-style: none !important;
@@ -130,13 +129,8 @@ text-align: right !important;
 }
 
 
-
-.input-field inputs::placeholder, .input-field select::placeholder{
-	color: "#fff" !important;
-}
-
  ::selection{
-	color: "#fff";
+	color: "#000000";
 }
 
 
@@ -393,7 +387,7 @@ nav a {
 
 
 	.main_body {
-	  background-image: url("../public/image/desktopPlain-Recovered.jpg");
+	  background-image: url("../public/image/desktop.jpg");
 	}
 
   }

@@ -19,14 +19,7 @@ form.addEventListener(
     const sub_1_5 = formData_one.get("sub_1_5");
     const sub_1_6 = formData_one.get("sub_1_6");
 
-    if (
-      sub_1_1 === "" ||
-      sub_1_2 === "" ||
-      sub_1_3 === "" ||
-      sub_1_4 === "" ||
-      sub_1_5 === "" ||
-      sub_1_6 === ""
-    ) {
+    if (sub_1_1 === "" || sub_1_3 === "") {
       appNotifier("Please fill in all the required fields!");
     } else {
       //  appending to the formData object created above
